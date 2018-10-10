@@ -35,7 +35,7 @@ cdef extern from 'comedilib.h':
 
     int comedi_loglevel(int loglevel)
     void comedi_perror(char *s)
-    char *comedi_strerror(int errnum)
+    const char *comedi_strerror(int errnum)
     int comedi_errno()
     int comedi_fileno(comedi_t *it)
 
@@ -44,8 +44,8 @@ cdef extern from 'comedilib.h':
     int comedi_get_n_subdevices(comedi_t *it)
     # COMEDI_VERSION_CODE handled by device.Device.get_version_code()
     int comedi_get_version_code(comedi_t *it)
-    char *comedi_get_driver_name(comedi_t *it)
-    char *comedi_get_board_name(comedi_t *it)
+    const char *comedi_get_driver_name(comedi_t *it)
+    const char *comedi_get_board_name(comedi_t *it)
     int comedi_get_read_subdevice(comedi_t *dev)
     int comedi_get_write_subdevice(comedi_t *dev)
 
