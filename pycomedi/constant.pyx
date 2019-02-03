@@ -115,7 +115,7 @@ from math import log as _log
 import sys as _sys
 
 import numpy as _numpy
-import comedi as _comedi
+import comedi.comedi as _comedi
 
 from . import LOG as _LOG
 
